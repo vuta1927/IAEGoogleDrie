@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityServer4" Version="2.2.0" />
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.6.0" />
+    <PackageReference Include="IdentityServer4.EntityFramework" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IAEGoogleDrie.AspNetCore\IAEGoogleDrie.AspNetCore.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.Common\IAEGoogleDrie.Common.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.IdentityServer4\IAEGoogleDrie.IdentityServer4.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.Storage.EntityFrameworkCore\IAEGoogleDrie.Storage.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie\IAEGoogleDrie.csproj" />
+  </ItemGroup>
+
+</Project>

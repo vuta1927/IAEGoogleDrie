@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Polly" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="2.1.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IAEGoogleDrie.AspNetCore\IAEGoogleDrie.AspNetCore.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.Common\IAEGoogleDrie.Common.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.IdentityServer4\IAEGoogleDrie.IdentityServer4.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.Storage.EntityFrameworkCore\IAEGoogleDrie.Storage.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie\IAEGoogleDrie.csproj" />
+  </ItemGroup>
+
+</Project>
