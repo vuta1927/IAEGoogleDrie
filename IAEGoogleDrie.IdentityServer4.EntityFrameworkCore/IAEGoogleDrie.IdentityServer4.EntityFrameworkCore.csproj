@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IAEGoogleDrie.IdentityServer4\IAEGoogleDrie.IdentityServer4.csproj" />
+    <ProjectReference Include="..\IAEGoogleDrie.Storage.EntityFrameworkCore\IAEGoogleDrie.Storage.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>

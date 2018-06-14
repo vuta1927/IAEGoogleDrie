@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie", "IAEGoogleDrie\IAEGoogleDrie.csproj", "{585778F2-6CA1-4A03-9867-751FC8BA767A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.Common", "IAEGoogleDrie.Common\IAEGoogleDrie.Common.csproj", "{22166F02-8980-41F6-87B9-6670DE76D4FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.AspNetCore", "IAEGoogleDrie.AspNetCore\IAEGoogleDrie.AspNetCore.csproj", "{2EAC48CB-7A9C-469B-8698-B179BCF145EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.IdentityServer4", "IAEGoogleDrie.IdentityServer4\IAEGoogleDrie.IdentityServer4.csproj", "{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.IdentityServer4.EntityFrameworkCore", "IAEGoogleDrie.IdentityServer4.EntityFrameworkCore\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore.csproj", "{9B828D07-04E5-4889-AAE5-D6753EA59919}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.Storage.EntityFrameworkCore", "IAEGoogleDrie.Storage.EntityFrameworkCore\IAEGoogleDrie.Storage.EntityFrameworkCore.csproj", "{58A19CDD-01DA-406C-AC97-110FF2D59799}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{585778F2-6CA1-4A03-9867-751FC8BA767A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585778F2-6CA1-4A03-9867-751FC8BA767A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585778F2-6CA1-4A03-9867-751FC8BA767A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585778F2-6CA1-4A03-9867-751FC8BA767A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22166F02-8980-41F6-87B9-6670DE76D4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22166F02-8980-41F6-87B9-6670DE76D4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22166F02-8980-41F6-87B9-6670DE76D4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22166F02-8980-41F6-87B9-6670DE76D4FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EAC48CB-7A9C-469B-8698-B179BCF145EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EAC48CB-7A9C-469B-8698-B179BCF145EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EAC48CB-7A9C-469B-8698-B179BCF145EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EAC48CB-7A9C-469B-8698-B179BCF145EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B828D07-04E5-4889-AAE5-D6753EA59919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B828D07-04E5-4889-AAE5-D6753EA59919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B828D07-04E5-4889-AAE5-D6753EA59919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B828D07-04E5-4889-AAE5-D6753EA59919}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A19CDD-01DA-406C-AC97-110FF2D59799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A19CDD-01DA-406C-AC97-110FF2D59799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A19CDD-01DA-406C-AC97-110FF2D59799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A19CDD-01DA-406C-AC97-110FF2D59799}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B688FA60-72CA-4E8D-A8EE-E87E07EC9AB8}
+	EndGlobalSection
+EndGlobal
