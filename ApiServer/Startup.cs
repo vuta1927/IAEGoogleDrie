@@ -42,22 +42,9 @@ namespace ApiServer
                 .AddJsonOptions(
                 options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
-
-            //services.AddHangfire(x => x.UseSqlServerStorage(Configuration.GetConnectionString("HangFireDB")));
-
-            services.AddDomain(options =>
-            {
-                options.DefaultNameOrConnectionString = Configuration.GetConnectionString("Default");
-                // Configure storage
-                options.Storage.UseEntityFrameworkCore(c =>
-                {
-                    c.AddDbContext<IaeContext>(config =>
-                            config.DbContextOptions.UseSqlServer(Configuration.GetConnectionString("Default")));
-                });
-            });
-
-            services.AddScoped<IUserService, UserService>();
+            
             services.AddScoped<IEmailHelper, EmailHelper>();
+            
 
             services.AddAuthentication(options =>
             {
@@ -69,11 +56,6 @@ namespace ApiServer
                 opts.Authority = Configuration["IdentityServer:Authority"];
                 opts.RequireHttpsMetadata = false;
                 opts.Audience = "api1";
-            }).AddGoogle("Google", options =>
-            {
-                options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-                options.ClientId = "434483408261-55tc8n0cs4ff1fe21ea8df2o443v2iuc.apps.googleusercontent.com";
-                options.ClientSecret = "3gcoTrEDPPJ0ukn_aYYT6PWo";
             });
 
             // Configure CORS for angular5 UI

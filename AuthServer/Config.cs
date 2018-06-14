@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using IdentityServer4;
 using IdentityServer4.Models;
+using IdentityServer4.Services;
+using IdentityServer4.Test;
 
-namespace IdentityServer
+namespace AuthServer
 {
     public class Config
     {
@@ -25,17 +27,16 @@ namespace IdentityServer
                 new IdentityResources.Profile()
             };
         }
-
         public static IEnumerable<Client> GetClients()
         {
             return new List<Client>
             {
                 new Client
                 {
-                    ClientId = "iae-client2",
+                    ClientId = "google",
                     ClientSecrets =
                     {
-                        new Secret("40A00C685411260BD89DF2459D8EE35FDE2FFAA3AD103EA9CD4362B544CEFE63".Sha256())
+                        new Secret("secret".Sha256())
                     },
                     AllowedGrantTypes =
                     {
@@ -47,26 +48,44 @@ namespace IdentityServer
                         IdentityServerConstants.StandardScopes.OfflineAccess,
                         "api1"
                     },
-                    UpdateAccessTokenClaimsOnRefresh = true,
                     AllowOfflineAccess = true,
                 },
                 new Client
                 {
-                    ClientId = "iae-client2",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials.Union(GrantTypes.ResourceOwnerPassword).ToList(),
+                    ClientId = "resourceOwner",
+                    ClientSecrets =
+                    {
+                        new Secret("secret".Sha256())
+                    },
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+
                     AllowedScopes =
                     {
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
                         IdentityServerConstants.StandardScopes.OfflineAccess,
                         "api1"
                     },
-                    ClientSecrets =
-                    {
-                        new Secret("40A00C685411260BD89DF2459D8EE35FDE2FFAA3AD103EA9CD4362B544CEFE63".Sha256())
-                    },
+
                     UpdateAccessTokenClaimsOnRefresh = true,
                     AllowOfflineAccess = true,
+                }
+            };
+        }
+
+        public static List<TestUser> GetUsers()
+        {
+            return new List<TestUser>
+            {
+                new TestUser
+                {
+                    SubjectId = "0001",
+                    Username = "behrooz",
+                    Password = "mypass",
+                },
+                new TestUser
+                {
+                    SubjectId = "0002",
+                    Username = "mahnaz",
+                    Password = "anotherpass",
                 }
             };
         }

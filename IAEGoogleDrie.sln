@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie", "IAEGoogleDrie\IAEGoogleDrie.csproj", "{585778F2-6CA1-4A03-9867-751FC8BA767A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAEGoogleDrie", "IAEGoogleDrie\IAEGoogleDrie.csproj", "{585778F2-6CA1-4A03-9867-751FC8BA767A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.Common", "IAEGoogleDrie.Common\IAEGoogleDrie.Common.csproj", "{22166F02-8980-41F6-87B9-6670DE76D4FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAEGoogleDrie.Common", "IAEGoogleDrie.Common\IAEGoogleDrie.Common.csproj", "{22166F02-8980-41F6-87B9-6670DE76D4FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.AspNetCore", "IAEGoogleDrie.AspNetCore\IAEGoogleDrie.AspNetCore.csproj", "{2EAC48CB-7A9C-469B-8698-B179BCF145EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAEGoogleDrie.AspNetCore", "IAEGoogleDrie.AspNetCore\IAEGoogleDrie.AspNetCore.csproj", "{2EAC48CB-7A9C-469B-8698-B179BCF145EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.IdentityServer4", "IAEGoogleDrie.IdentityServer4\IAEGoogleDrie.IdentityServer4.csproj", "{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAEGoogleDrie.IdentityServer4", "IAEGoogleDrie.IdentityServer4\IAEGoogleDrie.IdentityServer4.csproj", "{1894B133-A25C-49C4-BAAD-F15EEADE9DD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.IdentityServer4.EntityFrameworkCore", "IAEGoogleDrie.IdentityServer4.EntityFrameworkCore\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore.csproj", "{9B828D07-04E5-4889-AAE5-D6753EA59919}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAEGoogleDrie.IdentityServer4.EntityFrameworkCore", "IAEGoogleDrie.IdentityServer4.EntityFrameworkCore\IAEGoogleDrie.IdentityServer4.EntityFrameworkCore.csproj", "{9B828D07-04E5-4889-AAE5-D6753EA59919}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAEGoogleDrie.Storage.EntityFrameworkCore", "IAEGoogleDrie.Storage.EntityFrameworkCore\IAEGoogleDrie.Storage.EntityFrameworkCore.csproj", "{58A19CDD-01DA-406C-AC97-110FF2D59799}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IAEGoogleDrie.Storage.EntityFrameworkCore", "IAEGoogleDrie.Storage.EntityFrameworkCore\IAEGoogleDrie.Storage.EntityFrameworkCore.csproj", "{58A19CDD-01DA-406C-AC97-110FF2D59799}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{96F3C7E8-9ACC-4B71-ADA7-04B969E336C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{C250747D-482E-4D62-A713-0A98E2B0DD60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{C250747D-482E-4D62-A713-0A98E2B0DD60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiServer", "ApiServer\ApiServer.csproj", "{994BCDE5-50F7-4266-BE1B-ECDF262873EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiServer", "ApiServer\ApiServer.csproj", "{994BCDE5-50F7-4266-BE1B-ECDF262873EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "AuthServer\AuthServer.csproj", "{E43B45B7-C138-411E-9269-135F81537865}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{994BCDE5-50F7-4266-BE1B-ECDF262873EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{994BCDE5-50F7-4266-BE1B-ECDF262873EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{994BCDE5-50F7-4266-BE1B-ECDF262873EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E43B45B7-C138-411E-9269-135F81537865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E43B45B7-C138-411E-9269-135F81537865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E43B45B7-C138-411E-9269-135F81537865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E43B45B7-C138-411E-9269-135F81537865}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
