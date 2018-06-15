@@ -7,13 +7,14 @@ import { authPasswordFlowConfig } from '../../auth.config';
 import * as _ from 'lodash';
 import { ConfigurationService } from './configuration.service';
 import { UtilityService } from './utility.service';
-
+import { GoogleAuthService } from 'ng-gapi';
 @Injectable()
 export class SecurityService {
 
-    constructor(private oauthService: OAuthService, private configurationService: ConfigurationService, private utilService: UtilityService) { }
+    constructor(private oauthService: OAuthService, private gapi: GoogleAuthService, private configurationService: ConfigurationService, private utilService: UtilityService) { }
 
     public Config() {
+        console.log("url", this.configurationService.serverSettings.identityUrl);
         this.oauthService.configure(authPasswordFlowConfig(this.utilService.stripTrailingSlash(this.configurationService.serverSettings.identityUrl)));
         this.oauthService.setStorage(sessionStorage);
         this.oauthService.tokenValidationHandler = new JwksValidationHandler();
@@ -29,9 +30,12 @@ export class SecurityService {
         return Observable.fromPromise(this.oauthService.loadUserProfile());
     }
 
-    public Login(username: string, password: string): Observable<any> {
-        return Observable.fromPromise(this.oauthService.fetchTokenUsingPasswordFlow(username, password));
+    public Login(id_token: string): Observable<any> {
+
+        return Observable.fromPromise(this.oauthService.fetchTokenUsingGoogleGrant(id_token));
     }
+
+
 
     public getToken(): any {
         return this.oauthService.getAccessToken();
@@ -39,6 +43,8 @@ export class SecurityService {
 
     public Logoff() {
         this.oauthService.logOut();
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then();
     }
 
     public IsGranted(permission: string): boolean {

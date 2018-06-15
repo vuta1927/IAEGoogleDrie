@@ -14,7 +14,7 @@ namespace AuthServer
 
         public async Task ValidateAsync(ExtensionGrantValidationContext context)
         {
-            var userToken = context.Request.Raw.Get("id_token");
+            var userToken = context.Request.UserName; //.Raw.Get("username");
 
             if (string.IsNullOrEmpty(userToken))
             {

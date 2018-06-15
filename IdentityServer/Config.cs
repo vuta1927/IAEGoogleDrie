@@ -32,7 +32,7 @@ namespace IdentityServer
             {
                 new Client
                 {
-                    ClientId = "iae-client2",
+                    ClientId = "iae-client",
                     ClientSecrets =
                     {
                         new Secret("40A00C685411260BD89DF2459D8EE35FDE2FFAA3AD103EA9CD4362B544CEFE63".Sha256())
@@ -45,29 +45,29 @@ namespace IdentityServer
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OfflineAccess,
-                        "api1"
+                        "iae-api"
                     },
                     UpdateAccessTokenClaimsOnRefresh = true,
                     AllowOfflineAccess = true,
                 },
-                new Client
-                {
-                    ClientId = "iae-client2",
-                    AllowedGrantTypes = GrantTypes.ClientCredentials.Union(GrantTypes.ResourceOwnerPassword).ToList(),
-                    AllowedScopes =
-                    {
-                        IdentityServerConstants.StandardScopes.OpenId,
-                        IdentityServerConstants.StandardScopes.Profile,
-                        IdentityServerConstants.StandardScopes.OfflineAccess,
-                        "api1"
-                    },
-                    ClientSecrets =
-                    {
-                        new Secret("40A00C685411260BD89DF2459D8EE35FDE2FFAA3AD103EA9CD4362B544CEFE63".Sha256())
-                    },
-                    UpdateAccessTokenClaimsOnRefresh = true,
-                    AllowOfflineAccess = true,
-                }
+                //new Client
+                //{
+                //    ClientId = "iae-client2",
+                //    AllowedGrantTypes = GrantTypes.ClientCredentials.Union(GrantTypes.ResourceOwnerPassword).ToList(),
+                //    AllowedScopes =
+                //    {
+                //        IdentityServerConstants.StandardScopes.OpenId,
+                //        IdentityServerConstants.StandardScopes.Profile,
+                //        IdentityServerConstants.StandardScopes.OfflineAccess,
+                //        "api1"
+                //    },
+                //    ClientSecrets =
+                //    {
+                //        new Secret("40A00C685411260BD89DF2459D8EE35FDE2FFAA3AD103EA9CD4362B544CEFE63".Sha256())
+                //    },
+                //    UpdateAccessTokenClaimsOnRefresh = true,
+                //    AllowOfflineAccess = true,
+                //}
             };
         }
     }

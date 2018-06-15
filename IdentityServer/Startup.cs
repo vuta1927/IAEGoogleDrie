@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using IAEGoogleDrie.AspNetCore;
 using IAEGoogleDrie.IdentityServer4;
 using IAEGoogleDrie.Storage.EntityFrameworkCore;
+using IdentityServer.Auth;
 using IdentityServer4;
+using IdentityServer4.AspNetIdentity;
 using IdentityServer4.Services;
+using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -37,13 +40,15 @@ namespace IdentityServer
             });
 
             services.AddIdentityServer(x => { x.IssuerUri = Configuration["IdentityServer:Authority"]; })
-            .AddDeveloperSigningCredential()
-            .AddInMemoryIdentityResources(Config.GetIdentityResources())
-            .AddInMemoryApiResources(Config.GetApiResources())
-            .AddInMemoryClients(Config.GetClients())
-            .AddAppIdentityServer();
+                .AddDeveloperSigningCredential()
+                .AddInMemoryIdentityResources(Config.GetIdentityResources())
+                .AddInMemoryApiResources(Config.GetApiResources())
+                .AddInMemoryClients(Config.GetClients())
+                .AddExtensionGrantValidator<GoogleGrant>()
+                .AddAppIdentityServer();
 
             services.AddTransient<IProfileService, ProfileService>();
+            services.AddTransient<IAuthRepository, AuthRepository>();
 
             // Configure CORS for angular5 UI
             services.AddCors(

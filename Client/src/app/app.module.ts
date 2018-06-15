@@ -16,6 +16,23 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpClientLoader } from './shared/i18n/http-client-loader';
 
+import {
+  GoogleApiModule, 
+  GoogleApiService, 
+  GoogleAuthService, 
+  NgGapiClientConfig, 
+  NG_GAPI_CONFIG,
+  GoogleApiConfig
+} from "ng-gapi";
+
+let gapiClientConfig: NgGapiClientConfig = {
+  client_id: "1007548120111-gm69ue2i3oi6up347fibdu80en2hk3kq.apps.googleusercontent.com",
+  discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"],
+  scope: [
+    'https://www.googleapis.com/auth/drive.metadata.readonly'
+  ].join(" ")
+};
+
 @NgModule({
   declarations: [
     AppComponent
@@ -23,6 +40,11 @@ import { TranslateHttpClientLoader } from './shared/i18n/http-client-loader';
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     FormsModule,
+
+    GoogleApiModule.forRoot({
+      provide: NG_GAPI_CONFIG,
+      useValue: gapiClientConfig
+    }),
 
     TranslateModule.forRoot({
       loader: {

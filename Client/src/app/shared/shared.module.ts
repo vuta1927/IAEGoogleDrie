@@ -39,7 +39,7 @@ import { NgxFormErrorModule } from './utils/form-errors/ngx-errors.module';
 import { TranslateHttpClientLoader } from './i18n/http-client-loader';
 import { TranslateExtService } from './services/translate-ext.service';
 import { RolesService } from '../+administrator/roles/roles.service';
-
+import { GoogleService } from '../shared/services/google.service';
 export function httpTranslateLoader(http: HttpClient) {
     return new TranslateHttpClientLoader(http);
 }
@@ -93,7 +93,8 @@ export class SharedModule {
                 UsersService,
                 ScriptLoaderService,
                 TranslateExtService,
-                RolesService
+                RolesService,
+                GoogleService
             ]
         }
     }

@@ -58,7 +58,8 @@ export class AppComponent implements OnInit {
     //Get configuration from server environment variables:
     this.configurationService.load();
 
-    this.configurationService.settingsLoaded$.subscribe(_ => securityService.Config());
+    // this.configurationService.settingsLoaded$.subscribe(_ => securityService.Config());
+    securityService.Config();
   }
 
   ngOnInit() {

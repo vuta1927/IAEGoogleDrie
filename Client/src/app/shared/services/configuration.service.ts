@@ -16,14 +16,20 @@ export class ConfigurationService {
     constructor(private http: HttpClient, private storageService: StorageService) {}
 
     load() {
-        const baseURI = document.baseURI.endsWith('/') ? document.baseURI : `${document.baseURI}/`;
-        let url = `${baseURI}Home/Configuration`;
-        this.http.get<IConfiguration>(url).subscribe(result => {
-            this.serverSettings = result;
-            console.log(this.serverSettings)
-            this.storageService.store('identityUrl', this.serverSettings.identityUrl);
-            this.isReady = true;
-            this.settingsLoadedSource.next();
-        })
+        this.serverSettings = {identityUrl: '', apiUrl: ''}
+        this.serverSettings.identityUrl = 'http://localhost:5000';
+        this.serverSettings.apiUrl = 'http://localhost:5000';
+        this.storageService.store('identityUrl', this.serverSettings.identityUrl);
+        this.isReady = true;
+        this.settingsLoadedSource.next();
+        // const baseURI = document.baseURI.endsWith('/') ? document.baseURI : `${document.baseURI}/`;
+        // let url = `${baseURI}Home/Configuration`;
+        // this.http.get<IConfiguration>(url).subscribe(result => {
+        //     this.serverSettings = result;
+        //     console.log(this.serverSettings)
+        //     this.storageService.store('identityUrl', this.serverSettings.identityUrl);
+        //     this.isReady = true;
+        //     this.settingsLoadedSource.next();
+        // })
     }
 }

@@ -42,7 +42,17 @@ namespace ApiServer
                 .AddJsonOptions(
                 options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
-            
+            services.AddDomain(options =>
+            {
+                options.DefaultNameOrConnectionString = Configuration.GetConnectionString("Default");
+                // Configure storage
+                options.Storage.UseEntityFrameworkCore(c =>
+                {
+                    c.AddDbContext<IaeContext>(config =>
+                        config.DbContextOptions.UseSqlServer(Configuration.GetConnectionString("Default")));
+                });
+            });
+
             services.AddScoped<IEmailHelper, EmailHelper>();
             
 

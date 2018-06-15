@@ -38,7 +38,7 @@ namespace ApiServer.Model
             _ctx.Database.Migrate();
 
 
-            if (!_ctx.Users.Any(x => x.Email == "admin@demo.com"))
+            if (!_ctx.Users.Any(x => x.Email == "vutran@iae.edu.vn"))
             {
                 // Add 'administrator' role
                 var adminRole = await _ctx.Roles.FirstOrDefaultAsync(r => r.RoleName == "Administrator");
@@ -54,17 +54,17 @@ namespace ApiServer.Model
                 }
 
                 // Create admin user
-                var adminUser = _ctx.Users.FirstOrDefault(u => u.UserName == "admin");
+                var adminUser = _ctx.Users.FirstOrDefault(u => u.UserName == "vutran@iae.edu.vn");
                 if (adminUser == null)
                 {
                     adminUser = new User
                     {
-                        UserName = "admin",
+                        UserName = "vutran@iae.edu.vn",
                         NormalizedUserName = "ADMIN",
-                        Name = "admin",
-                        Surname = "admin",
-                        Email = "admin@demo.com",
-                        NormalizedEmail = "ADMIN@DEMO.COM",
+                        Name = "Vu",
+                        Surname = "Tran Anh",
+                        Email = "vutran@iae.edu.vn",
+                        NormalizedEmail = "vutran@iae.edu.vn".ToUpper(),
                         IsActive = true,
                         EmailConfirmed = true,
                         PasswordHash = "AQAAAAEAACcQAAAAEJtgQFVsPu2OwWrq0EmFohzSY1uzvWD474ucMUmwLek5A8iXuWpjIl061y4C2z5Fow==" //vdsFuturisx@2018

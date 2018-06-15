@@ -14,9 +14,9 @@ export function authPasswordFlowConfig(identityUrl: string): AuthConfig {
 
         clientId: 'iae-client',
 
-        dummyClientSecret: 'secret',
+        dummyClientSecret: '40A00C685411260BD89DF2459D8EE35FDE2FFAA3AD103EA9CD4362B544CEFE63',
 
-        scope: 'offline_access iae-api',
+        scope: 'offline_access',
 
         showDebugInformation: true,
 
