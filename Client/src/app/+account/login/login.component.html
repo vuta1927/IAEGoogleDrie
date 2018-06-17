@@ -22,7 +22,7 @@
               <div class="form-control-feedback" *ngxErrorTemplate="let item; maxError: 1">
                 {{ item.message }}
               </div>
-              <form class="m-login__form m-form" [formGroup]="loginForm" novalidate>
+              <form class="m-login__form m-form" >
                 <form-alert *ngIf="isLoginFail" (close)="isLoginFail=false" message="Incorrect username or password. Please try again."></form-alert>
                 
                 <div class="m-login__form-action">

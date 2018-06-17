@@ -22,6 +22,11 @@ export const ROUTES: Routes = [
         data: { pageTitle: 'Administrator' }
       },
       {
+        path: 'documents',
+        loadChildren: 'app/+documents/documents.module#DocumentsModule',
+        data: { pageTitle: 'Documents' }
+      },
+      {
         path: '404',
         loadChildren: 'app/shared/components/pages/default/not-found/not-found.module#NotFoundModule'
       }
