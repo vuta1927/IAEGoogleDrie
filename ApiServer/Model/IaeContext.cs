@@ -23,5 +23,11 @@ namespace ApiServer.Model
         public new DbSet<User> Users { get; set; }
         public DbSet<PermissionRole> PermissionRoles { get; set; }
         public new DbSet<Permission> Permissions { get; set; }
+        public DbSet<Document> Documents { get; set; }
+        public DbSet<DocumentType> DocumentTypes { get; set; }
+        public DbSet<Domain> Domains { get; set; }
+        public DbSet<Event> Events { get; set; }
+        public DbSet<EventType> EventTypes { get; set; }
+        public DbSet<ServiceAccount> ServiceAccounts { get; set; }
     }
 }
